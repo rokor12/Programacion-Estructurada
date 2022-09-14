@@ -41,11 +41,7 @@ void ordenarArr(int *arr, int arrSize){
 }
 void ordenarT_tres(t_tres *var){
 	int *arrAux = (int*)malloc(3*sizeof(int));
-	arrAux[0] = var->a;
-	arrAux[1] = var->b;
-	arrAux[2] = var->c;
+	arrAux[0] = var->a; arrAux[1] = var->b; arrAux[2] = var->c;
 	ordenarArr(arrAux,3);
-	var->a = arrAux[0];
-	var->b = arrAux[1];
-	var->c = arrAux[2];
+	var->a = arrAux[0]; var->b = arrAux[1]; var->c = arrAux[2];
 }
