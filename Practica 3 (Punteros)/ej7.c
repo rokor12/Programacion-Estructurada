@@ -26,6 +26,6 @@ char* cargarStrDin(){
 	}
 	size++;
 	str = realloc(str,size*sizeof(char));
-	str[size-1] = 0;
+	str[size-1] = '\0';
 	return str;
 }
