@@ -9,6 +9,7 @@ char* cargarStrDin();
 int main(){
 	char *str = cargarStrDin();
 	printf("%s\n", str);
+	return 0;
 }
 
 char* cargarStrDin(){
