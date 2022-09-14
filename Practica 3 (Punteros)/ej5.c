@@ -1,10 +1,3 @@
-/*
-Dada la estructura t_tres:
-Desarrollar una función que modifique el contenido de una variable externa de este tipo,
-de manera que los valores contenidos en cada campo queden ordenados. Es decir, el
-campo “a” debe tener el valor más bajo, el campo “b” el segundo más bajo y así
-sucesivamente.
-*/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
