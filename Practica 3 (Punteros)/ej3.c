@@ -1,6 +1,3 @@
-/*	Desarrollar una función que redondee al entero más próximo el valor contenido en una
-variable externa de tipo double.
-Aclaración: La función no deberá retornar valores.	*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
