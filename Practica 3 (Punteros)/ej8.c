@@ -29,7 +29,7 @@ void cargarStrDin2(char* str){
 	}
 	size++;
 	str = realloc(str,size*sizeof(char));
-	str[size-1] = 0;
+	str[size-1] = '\0';
 }
 
 char* cargarStrDin1(){
@@ -46,6 +46,6 @@ char* cargarStrDin1(){
 	}
 	size++;
 	str = realloc(str,size*sizeof(char));
-	str[size-1] = 0;
+	str[size-1] = '\0';
 	return str;
 }
