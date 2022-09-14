@@ -1,9 +1,3 @@
-/*	Desarrollar la función cargarStrDin() que permita ingresar una frase desde el teclado
-hasta presionar ENTER. Y que lo ingresado lo almacene en un arreglo en memoria
-dinámica y sin desperdiciar espacio. Luego la función deberá remitir al exterior el
-contenido cargado. Realizar una prueba desde el programa principal imprimiendo en
-consola el contenido remitido por la función.	*/
-
 #include <stdio.h>
 #include <stdlib.h>
 //#include <string.h>
