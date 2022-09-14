@@ -1,5 +1,3 @@
-/*	Desarrollar una función que reciba como parámetros dos punteros a int y qué
-intercambie los valores de las variables apuntadas por dichos punteros.	*/
 #include <stdio.h>
 #include <stdlib.h>
 
