@@ -1,14 +1,3 @@
-/*
-Dada la estructura t_varios:
-Desarrollar una función que intercambie los valores de 2 variables de este tipo, las
-cuales son externas a la función.
-
-Aclaración: La función podría realizarse en con cinco líneas de código.
-
-ANEXO: Calcular manualmente el tamaño “en byte” del la estructura. Luego pruebe en su
-programa imprimir el tamaño de la estructura utilizando la función sizeof()
-*/
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
