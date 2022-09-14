@@ -1,8 +1,3 @@
-/*	Desarrollar una función que reciba como parámetro un arreglo de int y una posición de
-dicho arreglo. Luego la función deberá retornar la dirección de memoria de la variable
-que se encuentra en esa posición del arreglo.
-Aclaración: La función se resuelve en una sóla línea de código.	*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
