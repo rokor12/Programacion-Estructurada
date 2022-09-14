@@ -1,12 +1,3 @@
-/*
-Desarrollar dos versiones de la función del ejercicio anterior cargarStrDin() según el siguiente detalles:
-Versiones de cargarStrDin():
-	1.	Esta versión char* cargarStrDin1(), no se le pasan parámetros y retorna la
-		dirección de memoria del arreglo dinámico creado.
-	2.	Esta versión void cargarStrDin2(char**), no retorna ningún valor, y se le
-		pasa por parámetro la dirección de memoria de un puntero a char.
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 //#include <string.h>
