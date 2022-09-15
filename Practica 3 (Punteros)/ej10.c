@@ -33,7 +33,7 @@ void cargarTexto(t_texto* str){
 	str->txt = (char*)malloc(sizeof(char));
 	int size = 0;
 	char c;
-	printf("cargar String2: ");
+	printf("cargar String: ");
 	c = getchar();
 	while(c!='\n'){
 		size++;
