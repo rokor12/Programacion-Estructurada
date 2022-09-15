@@ -9,7 +9,7 @@ int a, b;
 }t_dosint;
 
 void intercambio(t_dosint*);
-
+void intercambioAux(int*,int*);
 int main(){
 	t_dosint *var = (t_dosint*)malloc(sizeof(t_dosint));
 	var->a = 1; var->b = 2;
@@ -20,8 +20,11 @@ int main(){
 }
 
 void intercambio(t_dosint *var){
-	int aux;
-	aux = var->a;
-	var->a = var->b;
-	var->b = aux;
+	intercambioAux(&var->a,&var->b);
+}
+
+void intercambioAux(int *a, int *b){
+	int aux = *a;
+	*a = *b;
+	*b = aux;
 }
