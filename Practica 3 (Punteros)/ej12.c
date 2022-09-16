@@ -11,19 +11,36 @@ int longitud;
 };
 typedef struct s_texto t_texto;
 
-void cargarTexto(t_texto*);				// 3.10
-t_texto** cargarTextos();				// 3.12.a
-void ordenar(t_texto**);				// 3.12.b
-void intercambio(t_texto*, t_texto*);	// 3.12.b
-void comparar(t_texto*, t_texto*);
-void imprimir(t_texto**);
+void cargarTexto(t_texto*);					// 3.12.a | 3.10
+t_texto** cargarTextos();					// 3.12.a
+void ordenar(t_texto**);					// 3.12.b
+void intercambio(t_texto*, t_texto*);		// 3.12.b | 3.1 (modificada)
+void imprimirStrings(t_texto**);
+void imprimirString(t_texto*);				// 3.12.c
+void cargarStringsArch(char[],t_texto**);	// 3.12.d
+void escribirArchTex(char[],t_texto*);		// 3.12.d | 3.10
+
 
 int main(){
 	t_texto **strings = cargarTextos();
-	imprimir(strings);
 	ordenar(strings);
-	imprimir(strings);
+	imprimirStrings(strings);
+	cargarStringsArch("frases_con_longitud.csv",strings);
 	return 0;
+}
+
+void cargarStringsArch(char archivo[],t_texto **strings){
+	int i;
+	for(i=0;strcmp(strings[i]->txt,"");i++){
+		escribirArchTex(archivo,strings[i]);
+	}
+}
+
+void escribirArchTex(char archivo[],t_texto* string){
+	FILE *arch;
+	arch = fopen(archivo,"a");
+	fprintf(arch,"%d;%s\n",string->longitud,string->txt);
+	fclose(arch);
 }
 
 void ordenar(t_texto** strings){
@@ -37,13 +54,17 @@ void ordenar(t_texto** strings){
 	}
 }
 
-void imprimir(t_texto** strings){
+void imprimirStrings(t_texto** strings){
 	int i=0;
 	printf("\nFrases:\n");
 	while(strings[i]->longitud!=0){
-		printf("%d, %s\n",strings[i]->longitud,strings[i]->txt);
+		imprimirString(strings[i]);
 		i++;
 	}
+}
+
+void imprimirString(t_texto* string){
+	printf("%s\n",string->txt);
 }
 
 t_texto** cargarTextos(){
@@ -59,22 +80,22 @@ t_texto** cargarTextos(){
 	return strings;
 }
 
-void cargarTexto(t_texto* str){
-	str->txt = (char*)malloc(sizeof(char));
+void cargarTexto(t_texto* string){
+	string->txt = (char*)malloc(sizeof(char));
 	int size = 0;
 	char c;
 	printf("Cargar Frase: ");
 	c = getchar();
 	while(c!='\n'){
 		size++;
-		str->txt = realloc(str->txt,size*sizeof(char));
-		str->txt[size-1] = c;
+		string->txt = realloc(string->txt,size*sizeof(char));
+		string->txt[size-1] = c;
 		c = getchar();
 	}
 	size++;
-	str->txt = realloc(str->txt,size*sizeof(char));
-	str->txt[size-1] = '\0';
-	str->longitud = size-1;
+	string->txt = realloc(string->txt,size*sizeof(char));
+	string->txt[size-1] = '\0';
+	string->longitud = size-1;
 }
 
 void intercambio(t_texto *a, t_texto *b){
